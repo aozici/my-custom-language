@@ -1,0 +1,60 @@
+{
+    # =========================================================
+    # 1. DEĞİŞKENLER, METİNLER (STRING) VE BİRLEŞTİRME
+    # =========================================================
+    baslik = "=== Yorumlayici Tum Yetenekler Testi ==="
+    print(baslik)
+
+    # =========================================================
+    # 2. DİZİLER / LİSTELER, PUSH VE POP İŞLEMLERİ
+    # =========================================================
+    sayilar = [10, 20, 30]
+    push(sayilar, 40)
+    push(sayilar, 50)
+    
+    son_eleman = pop(sayilar)
+    print("Dizinin son hali boyutu: " + len(sayilar))
+    print("Cikarilan son eleman: " + son_eleman)
+
+    # =========================================================
+    # 3. ÖZYİNELEMELİ (RECURSIVE) FONKSİYON TANIMI
+    # =========================================================
+    def faktoriyel(n) {
+        if (n <= 1) {
+            return 1
+        }
+        return n * faktoriyel(n - 1)
+    }
+
+    f_sonuc = faktoriyel(5)
+    print("5! Faktoriyel sonucu: " + f_sonuc)
+
+    # =========================================================
+    # 4. MANTIKSAL OPERATÖRLER (and, or, not), DÖNGÜ VE BREAK/CONTINUE
+    # =========================================================
+    print("--- Dongu ve Mantiksal Kontrol Testi ---")
+    i = 0
+    while (i < 10) {
+        i = i + 1
+
+        # Cift sayilari atla (continue)
+        if (i == 2 or i == 4) {
+            continue
+        }
+
+        # 7'ye ulasildiginda donguyu tamamen sonlandir (break)
+        if (i >= 7 and not (i == 10)) {
+            print("Dongu " + i + " degerinde break ile kesildi.")
+            break
+        }
+
+        print("Islenen sayi: " + i)
+    }
+
+    # =========================================================
+    # 5. İÇ İÇE MATRİS VE İNDEKS ATAMASI
+    # =========================================================
+    matris = [[1, 2], [3, 4]]
+    matris[1][0] = 99
+    print("Matris guncellenmis eleman [1][0]: " + matris[1][0])
+}
